@@ -1,14 +1,15 @@
 {
   "name": "voiceover-bank",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 7000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-prod": "ng build --environment=prod --prod --aot --output-path build"
   },
   "private": true,
   "dependencies": {
