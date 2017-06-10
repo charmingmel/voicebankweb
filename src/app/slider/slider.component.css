@@ -1,0 +1,23 @@
+.hero {
+  position: fixed;
+  top: 0;
+  z-index: -2;
+  background-image: url('../../assets/img/vob-hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(-135deg, #F5515F 0%, #B6321E 100%);
+  opacity: 0.5;
+}
