@@ -18,6 +18,6 @@
   top: 0;
   width: 100%;
   height: 500px;
-  background-image: linear-gradient(-135deg, #F5515F 0%, #B6321E 100%);
+  background-image: linear-gradient(-180deg, #000 0%, #F5515F 50%, #B6321E 100%);
   opacity: 0.5;
 }
