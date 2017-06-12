@@ -1,0 +1,85 @@
+.main-content {
+  width: 100%;
+  margin-top: -60px;
+}
+
+.card .artist-image {
+  position: relative;
+  background-image: url('../../assets/img/vob-hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 180px;
+  font-weight: 300;
+}
+
+.card .artist-image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-180deg, #434343 0%, #212121 50%, #000 100%);
+  opacity: 0.5;
+}
+
+.card .artist-image .artist-name,
+.card .artist-image .categories {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding-left: 12px;
+}
+
+.card .artist-image .artist-name {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.card .artist-image .categories {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.card .artist-image .favourites {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffab40;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.card .artist-image .favourites i.fa-heart {
+  padding-right: 5px;
+}
+
+.card .artist-image .favourites:hover {
+  background-color: #f38800;
+  transition: all 0.4s ease-in-out;
+}
+
+.card .card-action {
+  padding: 12px;
+}
+
+.card .card-action a:not(.btn) {
+  color: #4a4a4a;
+  cursor: pointer;
+}
+
+.card .card-action a.book-artist {
+  color: #F5515F;
+  text-transform: capitalize;
+}
+
+.card .card-action a.book-artist:hover {
+  color: #4a4a4a;
+  text-decoration: underline;
+}

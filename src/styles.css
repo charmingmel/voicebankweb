@@ -10,3 +10,7 @@ body {
   font-family: 'Open Sans', sans-serif;*/
   font-family: 'Lato', sans-serif;
 }
+
+.backdrop {
+  background-color: #F5515F;
+}
