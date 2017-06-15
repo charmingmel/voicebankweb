@@ -1,4 +1,4 @@
-nav {
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   height: 80px;
   line-height: 80px;
   background-color: transparent;
@@ -6,7 +6,7 @@ nav {
   font-weight: 300;
 }
 
-.nav-wrapper ul a:hover {
+.nav-wrapper ul li a:hover {
   color: rgba(250, 250, 250, 0.7);
   background-color: transparent;
   transition: color 0.4s ease-in-out;
@@ -16,3 +16,15 @@ nav {
   width: 230px;
 }
 
+.join-us {
+  background: #B6321E;
+  text-transform: capitalize;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav-wrapper ul li a.join-us:hover {
+  color: #fff;
+  background-color: #F5515F;
+  transition: background-color 0.4s ease-in-out;
+}
