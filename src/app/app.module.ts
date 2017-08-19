@@ -10,7 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SliderComponent } from './slider/slider.component';
 import { VoiceOversComponent } from './voice-overs/voice-overs.component';
-
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { VoiceOversComponent } from './voice-overs/voice-overs.component';
     HeaderComponent,
     HomeComponent,
     SliderComponent,
+    PlayerComponent,
     VoiceOversComponent
   ],
   imports: [

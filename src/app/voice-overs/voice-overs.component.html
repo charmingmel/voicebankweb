@@ -11,9 +11,7 @@
             </a>
           </div>
           <div class="card-action">
-            <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="play">
-              <i class="fa fa-play" aria-hidden="true"></i>
-            </a>
+            <player [source]='voice.source' (playerClick)='trying($event)'></player>
             <a class="book-artist right">book artist</a>
           </div>
         </div>
