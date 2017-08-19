@@ -1,0 +1,158 @@
+.main-content {
+  width: 100%;
+  margin-top: -40px;
+}
+
+.card {
+  .artist-image {
+    position: relative;
+    background-image: url('../../assets/img/vob-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+    font-weight: 300;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(-180deg, #434343 0%, #212121 50%, #000 100%);
+      opacity: 0.5;
+    }
+    .artist-name, .categories {
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      padding-left: 12px;
+    }
+    .artist-name {
+      margin-bottom: 30px;
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+    .categories {
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+    .favourites {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #ffab40;
+      color: #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+      i.fa-heart {
+        padding-right: 5px;
+      }
+      &:hover {
+        background-color: #f38800;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+  .card-action {
+    padding: 12px;
+    a {
+      &:not(.btn) {
+        color: #4a4a4a;
+        cursor: pointer;
+      }
+      &.book-artist {
+        color: #F5515F;
+        text-transform: capitalize;
+        &:hover {
+          color: #4a4a4a;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.col.s6.m3:nth-child(4n) {
+  margin-bottom: 20px;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1110;
+  .modal-container {
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    color: #000;
+    width: 30%;
+    min-width: 365px;
+    margin: auto;
+    height: auto;
+    .mdi.mdi-close {
+      position: absolute;
+      font-size: 1.5rem;
+      top: 0.6rem;
+      right: 1.2rem;
+      color: #9e9e9e;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* .modal-wrapper .modal-container h3 {
+  font-size: 1.8rem;
+  color: #000;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  margin: 30px auto 15px;
+}
+
+.modal-wrapper .modal-container p {
+  color: #7d7d7d;
+  font-weight: 400;
+} */
+
+input {
+  border: 1px solid rgba(155, 155, 155, 0.3);
+  border-radius: 4px;
+  height: 40px;
+  width: 96%;
+  padding: 0px 7px;
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+label {
+  color: #222;
+  font-size: 1rem;
+}
+
+/* select {
+  display: block;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(155, 155, 155, 0.3);
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select:disabled {
+  color: #434343;
+  cursor: not-allowed;
+  background-color: #fafafa;
+} */

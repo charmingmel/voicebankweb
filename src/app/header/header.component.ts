@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'vob-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 
 export class HeaderComponent implements OnInit {

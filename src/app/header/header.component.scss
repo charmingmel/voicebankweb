@@ -1,9 +1,30 @@
-nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+nav {
   height: 80px;
   line-height: 80px;
   background-color: transparent;
   box-shadow: none;
   font-weight: 300;
+  .nav-wrapper i {
+    height: 80px;
+    line-height: 80px;
+    background-color: transparent;
+    box-shadow: none;
+    font-weight: 300;
+  }
+  a.button-collapse {
+    height: 80px;
+    line-height: 80px;
+    background-color: transparent;
+    box-shadow: none;
+    font-weight: 300;
+    i {
+      height: 80px;
+      line-height: 80px;
+      background-color: transparent;
+      box-shadow: none;
+      font-weight: 300;
+    }
+  }
 }
 
 .nav-wrapper ul li a:hover {

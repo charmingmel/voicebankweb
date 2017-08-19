@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'vob-voice-overs',
   templateUrl: './voice-overs.component.html',
-  styleUrls: ['./voice-overs.component.css']
+  styleUrls: ['./voice-overs.component.scss']
 })
-export class VoiceOversComponent implements OnInit {
+export class VoiceOversComponent implements OnInit, AfterViewInit {
+  public close = false;
   public voices = [
     {id: 0, name: 'Pemi', likes: '3.2k', categories: 'teens'},
     {id: 1, name: 'Shobo', likes: '2.1k', categories: 'male'},
@@ -23,7 +24,20 @@ export class VoiceOversComponent implements OnInit {
 
   constructor() { }
 
+  openModal() {
+    // $('#modal1').modal('open');
+    // console.log('jquery');
+  }
+
+  closeModal() {
+    this.close = true;
+  }
+
   ngOnInit() {
+  }
+
+  ngAfterViewInit () {
+
   }
 
 }
