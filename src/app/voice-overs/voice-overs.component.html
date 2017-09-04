@@ -13,10 +13,69 @@
           <div class="card-action">
             <player [source]='voice.source' (playerClick)='trying($event)'></player>
             <a class="book-artist right">book artist</a>
+            <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+            <!-- Modal Trigger -->
+             <a class="waves-effect waves-light btn modal-trigger" (click)="openModal()">Modal</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+</div>
+
+
+<div class="modal-wrapper center-align valign-wrapper" [style.background]="'rgba(0,0,0,0.5)'">
+  <div class="modal-container valign">
+    <i class="fa fa-times"></i>
+
+    <h3 class="modal-title">Book Artist</h3>
+
+      <form novalidate class="booking-form valign">
+      <div class="formgroup">
+        <!-- <label for="job-name">Name of Job</label><br> -->
+        <input type="text" name="goal-name" placeholder="TV Commercial" />
+      </div>
+
+      <div class="formgroup goal-plan">
+        <label for="goal-plan">Savings Plan</label><br>
+        <select name="goal-plan">
+          <option>Name</option>
+          <option>Name</option>
+          <option>Name</option>
+        </select>
+        <i class="mdi mdi-menu-down"></i>
+      </div>
+
+      <div class="form-group no-margin-bottom">
+        <div class="formgroup">
+          <label for="start-date">Start Date</label><br>
+          <input type="text" id="start-date" />
+          <i class="mdi mdi-calendar-range"></i>
+        </div><!-- end of start date -->
+
+        <div class="formgroup">
+          <label for="target-date">Target Date</label><br>
+          <input type="text" placeholder="Goal start date" class="targetdate" />
+          <i class="mdi mdi-calendar-range"></i>
+        </div>
+      </div>
+
+      <div class="center-align">
+        <button type="submit" class="btn"> Book
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

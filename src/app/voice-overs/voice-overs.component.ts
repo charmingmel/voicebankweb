@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import 'howler';
 
 @Component({
   selector: 'vob-voice-overs',
   templateUrl: './voice-overs.component.html',
-  styleUrls: ['./voice-overs.component.css']
+  styleUrls: ['./voice-overs.component.scss']
 })
-export class VoiceOversComponent implements OnInit {
+
+export class VoiceOversComponent implements OnInit, AfterViewInit {
   private currentlyPlaying: any;
 
+  public close = false;
   public voices = [
     {id: 0, name: 'Pemi', likes: '3.2k', categories: 'teens', source: '/assets/sounds/Hip.mp3'},
     {id: 1, name: 'Shobo', likes: '2.1k', categories: 'male', source: '/assets/sounds/Baba baba mix.mp3'},
@@ -36,4 +38,18 @@ export class VoiceOversComponent implements OnInit {
     this.currentlyPlaying = player;
     player.play();
   }
+  
+  openModal() {
+    // $('#modal1').modal('open');
+    // console.log('jquery');
+  }
+
+  closeModal() {
+    this.close = true;
+  }
+
+  ngAfterViewInit () {
+
+  }
+
 }

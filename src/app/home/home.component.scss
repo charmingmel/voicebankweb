@@ -9,41 +9,42 @@ footer {
   font-weight: 300;
   padding: 2% 4%;
   margin-top: 40px;
-}
-
-footer h5 {
-  text-transform: capitalize;
-  font-size: 18px;
-  font-weight: 300;
+  h5 {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 300;
+  }
 }
 
 .site-links li {
   padding-bottom: 10px;
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+      transition: all 0.4s ease-in-out;
+    }
+  }
 }
 
-.site-links li a {
-  color: #fff;
-}
-
-.site-links li a:hover {
-  text-decoration: underline;
-  transition: all 0.4s ease-in-out;
-}
-
-.contact i {
-  padding-right: 10px;
-  color: #fff;
-}
-
-.contact a {
-  color: #fff;
+.contact {
+  i {
+    padding-right: 10px;
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
 }
 
 .socials li {
   display: inline-block;
+  a i:hover {
+    color: #333;
+    transition: color 0.4s ease-in-out;
+  }
 }
 
-.socials li a i:hover,
 .contact a:hover {
   color: #333;
   transition: color 0.4s ease-in-out;
@@ -66,11 +67,9 @@ footer h5 {
   background: #8a2617;
   text-align: center;
   padding: 10px;
-
-}
-
-.copyright p {
-  margin: 0;
-  font-weight: 300;
-  letter-spacing: 1px;
+  p {
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
 }
