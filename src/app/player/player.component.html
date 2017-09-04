@@ -1,6 +1,7 @@
 <span>
-  <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="play" (click)='onClick($event)'>
-    <i class="fa fa-play" aria-hidden="true"></i>
+  <a (click)='onClick($event)'>
+    <i class="fa fa-play" *ngIf="!playing" aria-hidden="true"></i>
+    <i class="fa fa-pause" *ngIf="playing" aria-hidden="true"></i>
   </a>
   <div class="seeker" (click)='seekerClick($event)'>
     <div [style.width]="progress" class="seeker-progress"></div>

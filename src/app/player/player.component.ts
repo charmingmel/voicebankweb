@@ -10,17 +10,27 @@ import 'howler';
 export class PlayerComponent implements OnInit {
   @Input() source: any;
   private player: any;
+  private playerConfig: any;
   public progress = '0%';
+  public playing: boolean = false;
   @Output() playerClick = new EventEmitter();
 
   ngOnInit() {
-    this.player = new Howl({
+    this.playerConfig = {
       src: [this.source],
       volume: 0.5,
       onplay: () => {
+        this.playing = true;
         requestAnimationFrame(this.step.bind(this));
+      },
+      onpause: () => {
+        this.playing = false;
+      },
+      onstop: () => {
+        this.playing = false;
+        this.progress = "0%";
       }
-    });
+    }
   }
 
   seekerClick(event) {
@@ -56,6 +66,11 @@ export class PlayerComponent implements OnInit {
   }
 
   onClick(event) {
+    if(this.player && this.player.seek() === 0) return this.playerClick.emit(this.player);
+
+    if(this.player) return this.player.playing() ? this.player.pause() : this.player.play();
+
+    if(!this.player) { this.playing = true; this.player = new Howl(this.playerConfig) };
     this.playerClick.emit(this.player);
   }
 }
