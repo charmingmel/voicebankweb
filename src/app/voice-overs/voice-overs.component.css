@@ -29,21 +29,20 @@
 .card .artist-image .categories {
   color: #fff;
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 0;
   max-width: 100%;
   padding-left: 12px;
 }
 
 .card .artist-image .artist-name {
-  margin-bottom: 30px;
+  bottom: 30px;
   font-size: 20px;
   text-transform: capitalize;
 }
 
 .card .artist-image .categories {
   font-size: 10px;
-  margin-bottom: 10px;
 }
 
 .card .artist-image .favourites {

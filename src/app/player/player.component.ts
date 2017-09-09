@@ -2,16 +2,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import 'howler';
 
 @Component({
-  selector: 'player',
+  selector: 'vob-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css']
 })
 
 export class PlayerComponent implements OnInit {
   @Input() source: any;
+  @Output() playerClick = new EventEmitter();
   private player: any;
   public progress = '0%';
-  @Output() playerClick = new EventEmitter();
 
   ngOnInit() {
     this.player = new Howl({
@@ -25,13 +25,12 @@ export class PlayerComponent implements OnInit {
 
   seekerClick(event) {
     const pointClicked = event.layerX / event.target.offsetWidth;
-    this.progress = "0%";
-    this.progress = (pointClicked * 100) + "%";
+    this.progress = '0%';
+    this.progress = (pointClicked * 100) + '%';
     this.seek(pointClicked);
   }
 
   seek(per) {
-    var self = this;
     const skipTo = this.player.duration() * per;
     this.player.seek(0);
     this.player.seek(skipTo);
