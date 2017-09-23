@@ -86,3 +86,23 @@
 .col.s6.m3:nth-child(4n) {
   margin-bottom: 20px;
 }
+
+span a {
+  cursor: pointer;
+}
+
+.seeker {
+  position: absolute;
+  height: 14px;
+  width: 100%;
+  top: -15px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+}
+
+.seeker-progress {
+  background-color: #efeff2;
+  opacity: 0.3;
+  height: 100%;
+}

@@ -11,7 +11,12 @@
             </a>
           </div>
           <div class="card-action">
-            <vob-player [source]='voice.source' (playerClick)='trying($event)'></vob-player>
+            <div class="seeker" (click)='seekerClick($event)'>
+              <div [style.width]="progress" class="seeker-progress"></div>
+            </div>
+            <vob-player [shaPlay]='showPlayBtn' [source]='voice.source'
+              (onPlay)='playVoice($event)' (onPause)='pauseVoice($event)'>
+            </vob-player>
             <a class="book-artist right">book artist</a>
           </div>
         </div>

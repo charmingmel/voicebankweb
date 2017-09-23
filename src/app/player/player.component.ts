@@ -9,9 +9,13 @@ import 'howler';
 
 export class PlayerComponent implements OnInit {
   @Input() source: any;
-  @Output() playerClick = new EventEmitter();
-  private player: any;
+  @Output() onPlay = new EventEmitter();
+  @Output() onPause = new EventEmitter();
+  @Input() shaPlay;
+
+  public isPlaying = true;
   public progress = '0%';
+  private player;
 
   ngOnInit() {
     this.player = new Howl({
@@ -32,7 +36,6 @@ export class PlayerComponent implements OnInit {
 
   seek(per) {
     const skipTo = this.player.duration() * per;
-    this.player.seek(0);
     this.player.seek(skipTo);
   }
 
@@ -54,7 +57,13 @@ export class PlayerComponent implements OnInit {
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
 
-  onClick(event) {
-    this.playerClick.emit(this.player);
+  play(event) {
+    this.isPlaying = !this.isPlaying;
+    this.onPlay.emit(this.player);
+  }
+
+  pause(event) {
+    this.isPlaying = !this.isPlaying;
+    this.onPause.emit(this.player);
   }
 }

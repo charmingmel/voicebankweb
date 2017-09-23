@@ -1,6 +1,9 @@
 <span>
-  <a (click)='onClick($event)'>
-    <i class="fa fa-play" aria-hidden="true"></i>
+  <a *ngIf="isPlaying" (click)='play($event)'>
+    <i class="fa fa-play"  aria-hidden="true"></i>
+  </a>
+  <a *ngIf="!isPlaying" (click)='pause($event)'>
+    <i class="fa fa-pause"  aria-hidden="true"></i>
   </a>
   <div class="seeker" (click)='seekerClick($event)'>
     <div [style.width]="progress" class="seeker-progress"></div>
