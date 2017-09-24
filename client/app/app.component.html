@@ -1,30 +1,23 @@
-<div class="container">
+<div class="">
 
-  <nav class="navbar navbar-dark bg-primary">
-    <div class="nav navbar-nav">
-      <a routerLink="/" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <i class="fa fa-home"></i> Home
+  <nav class="container">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <img src="../assets/img/voblogo.png" alt="Voice Over Bank Logo">
       </a>
-      <a routerLink="/cats" class="nav-item nav-link" routerLinkActive="active">
-        <i class="fa fa-list"></i> Cats
-      </a>
-      <a routerLink="/login" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-        <i class="fa fa-sign-in"></i> Login
-      </a>
-      <a routerLink="/register" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-        <i class="fa fa-user-plus"></i> Register
-      </a>
-      <a routerLink="/account" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
-        <i class="fa fa-user"></i> Account ({{auth.currentUser.username}})
-      </a>
-      <a routerLink="/admin" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
-        <i class="fa fa-lock"></i> Admin
-      </a>
-      <a routerLink="/logout" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
-        <i class="fa fa-sign-out"></i> Logout
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Voice Talents</a></li>
+        <li><a href="#">E-Studio</a></li>
+        <li><a href="#" class="btn join-us">Join Us</a></li>
+      </ul>
+      <a href="#" class="button-collapse top-nav full hide-on-large-only right" data-activates="nav-mobile" (click)="initializeSideNav()">
+        <i class="material-icons">menu</i>
       </a>
     </div>
   </nav>
+
+
 
   <router-outlet></router-outlet>
 

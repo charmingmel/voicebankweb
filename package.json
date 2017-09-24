@@ -1,10 +1,9 @@
 {
-  "name": "angular2-full-stack",
-  "version": "4.0.0",
+  "name": "voiceover-bank",
+  "version": "0.0.1",
   "license": "MIT",
-  "author": "Davide Violante",
-  "description": "Angular Full Stack project built using Angular 2+, Express, Mongoose and Node.",
-  "angular-cli": {},
+  "author": "Mel Michael",
+  "description": "A directory of voice over talents built with Angular.",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
