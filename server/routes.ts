@@ -2,8 +2,10 @@ import * as express from 'express';
 
 import CatCtrl from './controllers/cat';
 import UserCtrl from './controllers/user';
+
 import Cat from './models/cat';
 import User from './models/user';
+import Voice from './models/voice';
 
 export default function setRoutes(app) {
 
@@ -11,14 +13,6 @@ export default function setRoutes(app) {
 
   const catCtrl = new CatCtrl();
   const userCtrl = new UserCtrl();
-
-  // Cats
-  router.route('/cats').get(catCtrl.getAll);
-  router.route('/cats/count').get(catCtrl.count);
-  router.route('/cat').post(catCtrl.insert);
-  router.route('/cat/:id').get(catCtrl.get);
-  router.route('/cat/:id').put(catCtrl.update);
-  router.route('/cat/:id').delete(catCtrl.delete);
 
   // Users
   router.route('/login').post(userCtrl.login);
@@ -28,6 +22,22 @@ export default function setRoutes(app) {
   router.route('/user/:id').get(userCtrl.get);
   router.route('/user/:id').put(userCtrl.update);
   router.route('/user/:id').delete(userCtrl.delete);
+
+  // Voices
+  router.route('/voices').get(catCtrl.getAll);
+  router.route('/voices/count').get(catCtrl.count);
+  router.route('/voice').post(catCtrl.insert);
+  router.route('/voice/:id').get(catCtrl.get);
+  router.route('/voice/:id').put(catCtrl.update);
+  router.route('/voice/:id').delete(catCtrl.delete);
+
+  // Cats
+  router.route('/cats').get(catCtrl.getAll);
+  router.route('/cats/count').get(catCtrl.count);
+  router.route('/cat').post(catCtrl.insert);
+  router.route('/cat/:id').get(catCtrl.get);
+  router.route('/cat/:id').put(catCtrl.update);
+  router.route('/cat/:id').delete(catCtrl.delete);
 
   // Apply the routes to our application with the prefix /api
   app.use('/api', router);
