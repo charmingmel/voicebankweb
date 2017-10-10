@@ -9,6 +9,7 @@ import 'howler';
 
 export class VoiceOversComponent implements OnInit, AfterViewInit {
   private currentlyPlaying: any;
+  public showModal: string = 'none';
 
   public close = false;
   public voices = [
@@ -39,13 +40,13 @@ export class VoiceOversComponent implements OnInit, AfterViewInit {
     player.play();
   }
   
-  openModal() {
-    // $('#modal1').modal('open');
-    // console.log('jquery');
+  openModal(event) {
+    event.preventDefault();
+    this.showModal = 'flex';
   }
 
   closeModal() {
-    this.close = true;
+    this.showModal = 'none';
   }
 
   ngAfterViewInit () {

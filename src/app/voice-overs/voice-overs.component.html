@@ -4,29 +4,17 @@
       <div class="col s6 m3" *ngFor="let voice of voices">
         <div class="card">
           <div class="artist-image">
-            <span class="artist-name">{{ voice.name}}</span><br/>
+            <span class="artist-name">{{ voice.name}}</span>
+            <br/>
             <span class="categories">{{ voice.categories }}</span>
             <a class="favourites">
-              <i class="fa fa-heart" aria-hidden="true"></i><span class="right">{{ voice.likes}}</span>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <span class="right">{{ voice.likes}}</span>
             </a>
           </div>
           <div class="card-action">
             <player [source]='voice.source' (playerClick)='trying($event)'></player>
-            <a class="book-artist right">book artist</a>
-            <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
-            <!-- Modal Trigger -->
-             <a class="waves-effect waves-light btn modal-trigger" (click)="openModal()">Modal</a>
-
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-              <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-              </div>
-              <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-              </div>
-            </div>
+            <a class="book-artist right" (click)='openModal($event)' href="#modal1">book artist</a>
           </div>
         </div>
       </div>
@@ -36,20 +24,22 @@
 </div>
 
 
-<div class="modal-wrapper center-align valign-wrapper" [style.background]="'rgba(0,0,0,0.5)'">
+<div  class="modal-wrapper center-align valign-wrapper" [style.background]="'rgba(0,0,0,0.5)'" [style.display]="showModal">
   <div class="modal-container valign">
-    <i class="fa fa-times"></i>
+    <span class="close-button" (click)="closeModal()">
+      <i class="fa fa-times" (click)="closeModal()"></i>
+    </span>
 
     <h3 class="modal-title">Book Artist</h3>
 
-      <form novalidate class="booking-form valign">
+    <form novalidate class="booking-form valign">
       <div class="formgroup">
-        <!-- <label for="job-name">Name of Job</label><br> -->
+        <label for="job-name">Name of Job</label>
         <input type="text" name="goal-name" placeholder="TV Commercial" />
       </div>
 
       <div class="formgroup goal-plan">
-        <label for="goal-plan">Savings Plan</label><br>
+        <label for="goal-plan">Savings Plan</label>
         <select name="goal-plan">
           <option>Name</option>
           <option>Name</option>
@@ -60,13 +50,13 @@
 
       <div class="form-group no-margin-bottom">
         <div class="formgroup">
-          <label for="start-date">Start Date</label><br>
+          <label for="start-date">Start Date</label>
           <input type="text" id="start-date" />
           <i class="mdi mdi-calendar-range"></i>
-        </div><!-- end of start date -->
+        </div>
 
         <div class="formgroup">
-          <label for="target-date">Target Date</label><br>
+          <label for="target-date">Target Date</label>
           <input type="text" placeholder="Goal start date" class="targetdate" />
           <i class="mdi mdi-calendar-range"></i>
         </div>

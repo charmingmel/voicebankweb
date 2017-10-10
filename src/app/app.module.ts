@@ -21,7 +21,8 @@ import { PlayerComponent } from './player/player.component';
     HomeComponent,
     SliderComponent,
     PlayerComponent,
-    VoiceOversComponent
+    VoiceOversComponent,
+    ModalComponent
   ],
   imports: [
     AppRoutingModule,

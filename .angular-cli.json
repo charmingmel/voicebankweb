@@ -19,9 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "vob",
       "styles": [
-        "../node_modules/materialize-css/sass/materialize.scss",
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../node_modules/owlcarousel/owl-carousel/owl.carousel.css",
+        "../node_modules/materialize-css/dist/css/materialize.min.css",
         "styles.scss"
       ],
       "scripts": [
